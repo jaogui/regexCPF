@@ -25,9 +25,15 @@ section form {
 
 section form input {
     max-width: 200px;
-    padding: 5px;
+    padding: 10px 5px;
     border-radius: 3px;
-    border: 1px solid #e3e3e3;
+    border: 2px solid #e3e3e3;
+    box-sizing: border-box;
+}
+
+section form label {
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 ul {
