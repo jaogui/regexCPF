@@ -19,17 +19,19 @@ export default class validaCPF {
     validar(cpf) {
         const matchCPF = cpf.match(/(?:\d{3}[-.\s]?){3}\d{2}/g);
 
-        return (matchCPF && matchCPF[0] === cpf)
+        return matchCPF && matchCPF[0] === cpf;
     }
 
     validarEmMudanca(cpfElement) {
-
         if (this.validar(cpfElement.value)) {
-            cpfElement.value = this.formatar(cpfElement.value)
-
+            cpfElement.value = this.formatar(cpfElement.value);
+            cpfElement.classList.add("success-cpf");
+            cpfElement.classList.remove("error-cpf");
+            cpfElement.nextElementSibling.classList.remove("ativar");
         } else {
-
-
+            cpfElement.classList.add("error-cpf");
+            cpfElement.classList.remove("success-cpf");
+            cpfElement.nextElementSibling.classList.add("ativar");
         }
     }
 
@@ -39,8 +41,17 @@ export default class validaCPF {
         });
     }
 
+    adicionaErro() {
+        const errorElement = document.createElement('span');
+        errorElement.classList.add('error-text');
+        errorElement.innerText = 'CPF inválido';
+        this.element.parentElement.insertBefore(errorElement, this.element.nextElementSibling);
+
+    }
+
     iniciar() {
         this.adicionarEvento();
+        this.adicionaErro();
         return this;
     }
 }

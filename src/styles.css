@@ -24,10 +24,9 @@ section form {
 }
 
 section form input {
-    max-width: 200px;
-    padding: 10px 5px;
-    border-radius: 3px;
-    border: 2px solid #e3e3e3;
+    max-width: 250px;
+    padding: 8px 5px;
+    border: 2px solid black;
     box-sizing: border-box;
 }
 
@@ -55,4 +54,24 @@ li {
 
 li:nth-of-type(odd) {
     background: rgba(0, 0, 0, 0.1);
+}
+
+.error-cpf {
+    border: 2px solid red;
+}
+
+.success-cpf {
+    border: 2px solid rgb(92, 154, 196);
+}
+
+.error-text {
+    display: none;
+    font-size: 12px;
+    padding: 5px 0px;
+    color: red;
+    font-weight: bold;
+}
+
+.error-text.ativar {
+    display: block;
 }
