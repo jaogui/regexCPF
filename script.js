@@ -1,7 +1,7 @@
-import manipularCPF from './src/manipula-cpf.js';
-manipularCPF();
-import validaCPF from './src/valida-cpf.js';
+// import manipularCPF from './src/manipula-cpf.js';
+// manipularCPF();
 
+import validaCPF from './src/valida-cpf.js';
 
 const inputCPF = document.getElementById('inputCPF');
 const validarCPF = new validaCPF(inputCPF).iniciar();
