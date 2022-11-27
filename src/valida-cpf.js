@@ -16,8 +16,15 @@ export default class validaCPF {
         return this.construir(cpfLimpo);
     }
 
+    validar(cpf) {
+        const matchCPF = cpf.match(/(?:\d{3}[-.\s]?){3}\d{2}/g);
+
+        console.log(matchCPF);
+
+    }
+
     validarEmMudanca(cpfElement) {
-        console.log(cpfElement.value);
+        console.log(this.validar(cpfElement.value));
     }
 
     adicionarEvento() {
