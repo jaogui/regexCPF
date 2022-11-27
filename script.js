@@ -1,5 +1,5 @@
-// import manipularCPF from './src/manipula-cpf.js';
-// manipularCPF();
+import manipularCPF from './src/manipula-cpf.js';
+manipularCPF();
 
 import validaCPF from './src/valida-cpf.js';
 
