@@ -21,9 +21,13 @@ export default class validaCPF {
     }
 
     adicionarEvento() {
-        this.element.addEventListener('change', () => {
+        this.element.addEventListener("change", () => {
             this.validarEmMudanca(this.element);
-
         });
+    }
+
+    iniciar() {
+        this.adicionarEvento();
+        return this;
     }
 }
