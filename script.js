@@ -5,12 +5,8 @@ const itemsCPF = document.querySelectorAll('.list-cpf li');
 console.log(itemsCPF);
 
 
-function captureText(elements) {
-    const arrayElements = Array.from(elements);
-
-    return arrayElements.map(element => {
-        return element.innerText;
-    })
+function captureText([...elements]) {
+    return elements.map(element => element.innerText)
 }
 
 
