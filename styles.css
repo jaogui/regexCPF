@@ -1,12 +1,45 @@
+body {
+    font-family: "IBM Plex Mono";
+    padding: 60px 0px;
+}
+
+body div {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+body div section {
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(227, 227, 227, 0.101);
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+section form input {
+    max-width: 200px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #e3e3e3;
+}
+
 ul {
     padding: unset;
     display: flex;
     flex-direction: column;
     gap: 2px;
+    width: 100%;
+    max-width: 200px;
 }
 
 li {
-    font-family: 'IBM Plex Mono';
     list-style: none;
     padding: 5px 5px 5px 5px;
     letter-spacing: 1px;
@@ -15,5 +48,5 @@ li {
 }
 
 li:nth-of-type(odd) {
-    background: rgba(0, 0, 0, .1);
+    background: rgba(0, 0, 0, 0.1);
 }
