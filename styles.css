@@ -1,0 +1,19 @@
+ul {
+    padding: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+li {
+    font-family: 'IBM Plex Mono';
+    list-style: none;
+    padding: 5px 5px 5px 5px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: black;
+}
+
+li:nth-of-type(odd) {
+    background: rgba(0, 0, 0, .1);
+}
