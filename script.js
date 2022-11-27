@@ -10,4 +10,4 @@ const inputCPF = document.getElementById('inputCPF');
 const validarCPF = new validaCPF(inputCPF);
 
 
-console.log(validarCPF.construir('155.555.555-40'));
+console.log(validarCPF.formatar('155.555-995.40'));
