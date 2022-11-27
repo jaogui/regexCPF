@@ -15,4 +15,15 @@ export default class validaCPF {
         const cpfLimpo = this.limpar(cpf);
         return this.construir(cpfLimpo);
     }
+
+    validarEmMudanca(cpfElement) {
+        console.log(cpfElement.value);
+    }
+
+    adicionarEvento() {
+        this.element.addEventListener('change', () => {
+            this.validarEmMudanca(this.element);
+
+        });
+    }
 }
