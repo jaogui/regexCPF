@@ -20,6 +20,6 @@ No arquivo script.js, declare o input para receber CPF e inicialize a validaçã
 
 ```bash
     const meuInput = document.getElementById('inputCPF');
-    const minhaVariavel = new validaCPF(inputCPF).iniciar();
+    const minhaVariavel = new validaCPF(meuInput).iniciar();
 ```
 
