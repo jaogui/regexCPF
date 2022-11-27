@@ -13,9 +13,12 @@ function captureText([...elements]) {
 //Limpa todos caracteres dos números
 const cleanCPF = (cpf) => {
     return cpf.replace(/\D/g, '')
-
 }
 
+const formatCPF = (cpf) => {
+    return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, '$1.$2.$3-$4');
+}
 
-console.log(cleanCPF(('156.457.444 10')))
-console.log(captureText(itemsCPF))
+console.log('Captura CPF:' + captureText(itemsCPF))
+console.log('Limpa CPF:' + cleanCPF(('156.457.444 10')))
+console.log('Formata CPF:' + formatCPF(('15645744410')))
