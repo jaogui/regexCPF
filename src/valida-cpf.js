@@ -19,12 +19,18 @@ export default class validaCPF {
     validar(cpf) {
         const matchCPF = cpf.match(/(?:\d{3}[-.\s]?){3}\d{2}/g);
 
-        console.log(matchCPF);
-
+        return (matchCPF && matchCPF[0] === cpf)
     }
 
     validarEmMudanca(cpfElement) {
-        console.log(this.validar(cpfElement.value));
+
+        if (this.validar(cpfElement.value)) {
+            cpfElement.value = this.formatar(cpfElement.value)
+
+        } else {
+
+
+        }
     }
 
     adicionarEvento() {
