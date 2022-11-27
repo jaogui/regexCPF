@@ -1,5 +1,6 @@
 const itemsCPF = document.querySelectorAll(".list-cpf li");
-console.log(itemsCPF);
+// console.log(itemsCPF);
+
 
 //Formata CPF
 //Desestrutura elementos transformando em array.
@@ -20,15 +21,29 @@ const formatCPF = (cpf) => {
     return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, "$1.$2.$3-$4");
 };
 
-const buildCPF = (cpfs) => {
+//BuildCPF
+//Executa aconstrução do cpf.
+const buildCPFS = (cpfs) => {
     return cpfs.map(cleanCPF).map(formatCPF);
 };
 
-console.log("Captura CPF:" + captureText(itemsCPF));
-console.log("Limpa CPF:" + cleanCPF("156.457.444 10"));
-console.log("Formata CPF:" + formatCPF("15645744410"));
+
+const insertCPF = (listaCPF) => {
+    const cpfs = captureText(listaCPF);
+    const cpfsFormatados = buildCPFS(cpfs);
 
 
-const resultado = captureText(itemsCPF);
+    listaCPF.forEach((element, index) => {
+        element.innerText = cpfsFormatados[index];
+    })
+}
 
-console.log(buildCPF(resultado));
+
+insertCPF(itemsCPF);
+
+
+// console.log("Captura CPF:" + captureText(itemsCPF));
+// console.log("Limpa CPF:" + cleanCPF("156.457.444 10"));
+// console.log("Formata CPF:" + formatCPF("15645744410"));
+// const resultado = captureText(itemsCPF);
+// console.log(buildCPF(resultado));
