@@ -1,6 +1,6 @@
 export default function manipularCPF() {
     const itemsCPF = document.querySelectorAll(".list-cpf li");
-    // console.log(itemsCPF);
+
 
     //Formata CPF
     //Desestrutura elementos transformando em array.
